@@ -1,0 +1,57 @@
+
+
+
+
+
+
+
+
+
+
+
+Welcome to Cloud Shell! Type "help" to get started.
+Your Cloud Platform project in this session is set to qwiklabs-gcp-02-54512881e9f2.
+Use “gcloud config set project [PROJECT_ID]” to change to a different project.
+student_01_5a05c7e0b501@cloudshell:~ (qwiklabs-gcp-02-54512881e9f2)$ gsutil mb gs://sample_bucket_peculiar2
+
+Creating gs://sample_bucket_peculiar2/...
+You are attempting to access protected data with no configured
+credentials. Please visit https://cloud.google.com/console#/project
+and sign up for an account, and then run the "gcloud auth login"
+command to configure gsutil to use these credentials.
+student_01_5a05c7e0b501@cloudshell:~ (qwiklabs-gcp-02-54512881e9f2)$
+student_01_5a05c7e0b501@cloudshell:~ (qwiklabs-gcp-02-54512881e9f2)$ gcloud auth login
+
+You are already authenticated with gcloud when running
+inside the Cloud Shell and so do not need to run this
+command. Do you wish to proceed anyway?
+
+Do you want to continue (Y/n)?  y
+
+You are authorizing gcloud CLI without access to a web browser. Please run the following command on a machine with a web browser and copy its output back here. Make sure the installed gcloud version is 372.0.0 or newer.
+
+gcloud auth login --remote-bootstrap="https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=32555940559.apps.googleusercontent.com&scope=openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fsqlservice.login+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth&state=bgqoatqyh0eDsW5VhIVdsRND3eAuxm&access_type=offline&code_challenge=niF0nMcMIek_6856Wns3P58-wDRuUBbjbkNcR-FlSYQ&code_challenge_method=S256&token_usage=remote"
+
+
+Enter the output of the above command: gcloud auth login --remote-bootstrap="https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=32555940559.apps.googleusercontent.com&scope=openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fsqlservice.login+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth&state=bgqoatqyh0eDsW5VhIVdsRND3eAuxm&access_type=offline&code_challenge=niF0nMcMIek_6856Wns3P58-wDRuUBbjbkNcR-FlSYQ&code_challenge_method=S256&token_usage=remote"
+ERROR: There was a problem with web authentication.
+ERROR: (gcloud.auth.login) The provided authorization response is invalid. Expect a url with query parameters of [state, code, scope].
+student_01_5a05c7e0b501@cloudshell:~ (qwiklabs-gcp-02-54512881e9f2)$ gcloud auth login
+
+You are already authenticated with gcloud when running
+inside the Cloud Shell and so do not need to run this
+command. Do you wish to proceed anyway?
+
+Do you want to continue (Y/n)?  n
+
+student_01_5a05c7e0b501@cloudshell:~ (qwiklabs-gcp-02-54512881e9f2)$ gsutil mb gs://sample_bucket_peculiar2
+Creating gs://sample_bucket_peculiar2/...
+student_01_5a05c7e0b501@cloudshell:~ (qwiklabs-gcp-02-54512881e9f2)$ ls
+DataEntryforTimeLine.xlsx  README-cloudshell.txt
+student_01_5a05c7e0b501@cloudshell:~ (qwiklabs-gcp-02-54512881e9f2)$ gsutil cp 'DataEntryforTimeLine.xlsx' gs://sample_bucket_peculiar1
+Copying file://DataEntryforTimeLine.xlsx [Content-Type=application/vnd.openxmlformats-officedocument.spreadsheetml.sheet]...
+/ [1 files][  8.8 KiB/  8.8 KiB]
+Operation completed over 1 objects/8.8 KiB.
+student_01_5a05c7e0b501@cloudshell:~ (qwiklabs-gcp-02-54512881e9f2)$ ^C
+student_01_5a05c7e0b501@cloudshell:~ (qwiklabs-gcp-02-54512881e9f2)$ ^C
+student_01_5a05c7e0b501@cloudshell:~ (qwiklabs-gcp-02-54512881e9f2)$
